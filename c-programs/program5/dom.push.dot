@@ -1,0 +1,11 @@
+digraph "Dominator tree for 'push' function" {
+	label="Dominator tree for 'push' function";
+
+	Node0x560207b4e550 [shape=record,label="{%1:\l  %2 = alloca i32, align 4\l  store i32 %0, i32* %2, align 4\l  %3 = load i32, i32* @top, align 4\l  %4 = icmp eq i32 %3, 99\l  br i1 %4, label %5, label %7\l}"];
+	Node0x560207b4e550 -> Node0x560207b4e9c0;
+	Node0x560207b4e550 -> Node0x560207b4ea20;
+	Node0x560207b4e550 -> Node0x560207b4ea80;
+	Node0x560207b4e9c0 [shape=record,label="{%5:\l5:                                                \l  %6 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([23 x\l... i8], [23 x i8]* @.str, i64 0, i64 0))\l  br label %15\l}"];
+	Node0x560207b4ea20 [shape=record,label="{%15:\l15:                                               \l  ret void\l}"];
+	Node0x560207b4ea80 [shape=record,label="{%7:\l7:                                                \l  %8 = load i32, i32* %2, align 4\l  %9 = load i32, i32* @top, align 4\l  %10 = add nsw i32 %9, 1\l  store i32 %10, i32* @top, align 4\l  %11 = sext i32 %10 to i64\l  %12 = getelementptr inbounds [100 x i32], [100 x i32]* @stack, i64 0, i64 %11\l  store i32 %8, i32* %12, align 4\l  %13 = load i32, i32* %2, align 4\l  %14 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([20 x\l... i8], [20 x i8]* @.str.1, i64 0, i64 0), i32 noundef %13)\l  br label %15\l}"];
+}

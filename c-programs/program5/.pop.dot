@@ -1,0 +1,12 @@
+digraph "CFG for 'pop' function" {
+	label="CFG for 'pop' function";
+
+	Node0x560207b665c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%0:\l  %1 = alloca i32, align 4\l  %2 = load i32, i32* @top, align 4\l  %3 = icmp eq i32 %2, -1\l  br i1 %3, label %4, label %6\l|{<s0>T|<s1>F}}"];
+	Node0x560207b665c0:s0 -> Node0x560207b667d0;
+	Node0x560207b665c0:s1 -> Node0x560207b66820;
+	Node0x560207b667d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7b39670",label="{%4:\l4:                                                \l  %5 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([24 x\l... i8], [24 x i8]* @.str.2, i64 0, i64 0))\l  store i32 -1, i32* %1, align 4\l  br label %17\l}"];
+	Node0x560207b667d0 -> Node0x560207b66b80;
+	Node0x560207b66820 [shape=record,color="#b70d28ff", style=filled, fillcolor="#e8765c70",label="{%6:\l6:                                                \l  %7 = load i32, i32* @top, align 4\l  %8 = sext i32 %7 to i64\l  %9 = getelementptr inbounds [100 x i32], [100 x i32]* @stack, i64 0, i64 %8\l  %10 = load i32, i32* %9, align 4\l  %11 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([22 x\l... i8], [22 x i8]* @.str.3, i64 0, i64 0), i32 noundef %10)\l  %12 = load i32, i32* @top, align 4\l  %13 = add nsw i32 %12, -1\l  store i32 %13, i32* @top, align 4\l  %14 = sext i32 %12 to i64\l  %15 = getelementptr inbounds [100 x i32], [100 x i32]* @stack, i64 0, i64 %14\l  %16 = load i32, i32* %15, align 4\l  store i32 %16, i32* %1, align 4\l  br label %17\l}"];
+	Node0x560207b66820 -> Node0x560207b66b80;
+	Node0x560207b66b80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%17:\l17:                                               \l  %18 = load i32, i32* %1, align 4\l  ret i32 %18\l}"];
+}

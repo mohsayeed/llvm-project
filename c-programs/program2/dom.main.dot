@@ -1,0 +1,5 @@
+digraph "Dominator tree for 'main' function" {
+	label="Dominator tree for 'main' function";
+
+	Node0x55801c8c7e30 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %2 = alloca %struct.MyClass, align 8\l  store i32 0, i32* %1, align 4\l  %3 = getelementptr inbounds %struct.MyClass, %struct.MyClass* %2, i32 0, i32\l... 0\l  store i32 5, i32* %3, align 8\l  %4 = getelementptr inbounds %struct.MyClass, %struct.MyClass* %2, i32 0, i32\l... 1\l  store i32 10, i32* %4, align 4\l  %5 = getelementptr inbounds %struct.MyClass, %struct.MyClass* %2, i32 0, i32\l... 2\l  %6 = bitcast \{\}** %5 to void (%struct.MyClass*)**\l  store void (%struct.MyClass*)* @myMethod, void (%struct.MyClass*)** %6,\l... align 8\l  %7 = getelementptr inbounds %struct.MyClass, %struct.MyClass* %2, i32 0, i32\l... 2\l  %8 = bitcast \{\}** %7 to void (%struct.MyClass*)**\l  %9 = load void (%struct.MyClass*)*, void (%struct.MyClass*)** %8, align 8\l  call void %9(%struct.MyClass* noundef %2)\l  ret i32 0\l}"];
+}

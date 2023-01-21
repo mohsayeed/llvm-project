@@ -1,0 +1,5 @@
+digraph "CFG for 'myMethod' function" {
+	label="CFG for 'myMethod' function";
+
+	Node0x55801c8dcdd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%1:\l  %2 = alloca %struct.MyClass*, align 8\l  store %struct.MyClass* %0, %struct.MyClass** %2, align 8\l  %3 = load %struct.MyClass*, %struct.MyClass** %2, align 8\l  %4 = getelementptr inbounds %struct.MyClass, %struct.MyClass* %3, i32 0, i32\l... 0\l  %5 = load i32, i32* %4, align 8\l  %6 = load %struct.MyClass*, %struct.MyClass** %2, align 8\l  %7 = getelementptr inbounds %struct.MyClass, %struct.MyClass* %6, i32 0, i32\l... 1\l  %8 = load i32, i32* %7, align 4\l  %9 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([14 x\l... i8], [14 x i8]* @.str, i64 0, i64 0), i32 noundef %5, i32 noundef %8)\l  ret void\l}"];
+}

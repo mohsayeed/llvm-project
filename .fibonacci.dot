@@ -1,0 +1,21 @@
+digraph "CFG for 'fibonacci' function" {
+	label="CFG for 'fibonacci' function";
+
+	Node0x55f2dc67b120 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%1:\l  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store i32 %0, i32* %2, align 4\l  store i32 0, i32* %4, align 4\l  store i32 1, i32* %5, align 4\l  %7 = load i32, i32* %2, align 4\l  %8 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([35 x\l... i8], [35 x i8]* @.str, i64 0, i64 0), i32 noundef %7)\l  store i32 0, i32* %3, align 4\l  br label %9\l}"];
+	Node0x55f2dc67b120 -> Node0x55f2dc67b970;
+	Node0x55f2dc67b970 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%9:\l9:                                                \l  %10 = load i32, i32* %3, align 4\l  %11 = load i32, i32* %2, align 4\l  %12 = icmp slt i32 %10, %11\l  br i1 %12, label %13, label %30\l|{<s0>T|<s1>F}}"];
+	Node0x55f2dc67b970:s0 -> Node0x55f2dc67c190;
+	Node0x55f2dc67b970:s1 -> Node0x55f2dc67c1e0;
+	Node0x55f2dc67c190 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%13:\l13:                                               \l  %14 = load i32, i32* %3, align 4\l  %15 = icmp sle i32 %14, 1\l  br i1 %15, label %16, label %18\l|{<s0>T|<s1>F}}"];
+	Node0x55f2dc67c190:s0 -> Node0x55f2dc67c420;
+	Node0x55f2dc67c190:s1 -> Node0x55f2dc67c470;
+	Node0x55f2dc67c420 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e1675170",label="{%16:\l16:                                               \l  %17 = load i32, i32* %3, align 4\l  store i32 %17, i32* %6, align 4\l  br label %24\l}"];
+	Node0x55f2dc67c420 -> Node0x55f2dc67c620;
+	Node0x55f2dc67c470 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e1675170",label="{%18:\l18:                                               \l  %19 = load i32, i32* %4, align 4\l  %20 = load i32, i32* %5, align 4\l  %21 = add nsw i32 %19, %20\l  store i32 %21, i32* %6, align 4\l  %22 = load i32, i32* %5, align 4\l  store i32 %22, i32* %4, align 4\l  %23 = load i32, i32* %6, align 4\l  store i32 %23, i32* %5, align 4\l  br label %24\l}"];
+	Node0x55f2dc67c470 -> Node0x55f2dc67c620;
+	Node0x55f2dc67c620 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%24:\l24:                                               \l  %25 = load i32, i32* %6, align 4\l  %26 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([4 x\l... i8], [4 x i8]* @.str.1, i64 0, i64 0), i32 noundef %25)\l  br label %27\l}"];
+	Node0x55f2dc67c620 -> Node0x55f2dc67cd60;
+	Node0x55f2dc67cd60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%27:\l27:                                               \l  %28 = load i32, i32* %3, align 4\l  %29 = add nsw i32 %28, 1\l  store i32 %29, i32* %3, align 4\l  br label %9, !llvm.loop !4\l}"];
+	Node0x55f2dc67cd60 -> Node0x55f2dc67b970;
+	Node0x55f2dc67c1e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%30:\l30:                                               \l  ret void\l}"];
+}

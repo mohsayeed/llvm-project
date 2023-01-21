@@ -1,0 +1,14 @@
+digraph "CFG for 'print_stack' function" {
+	label="CFG for 'print_stack' function";
+
+	Node0x560207b67760 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%0:\l  %1 = alloca i32, align 4\l  %2 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([8 x\l... i8], [8 x i8]* @.str.4, i64 0, i64 0))\l  store i32 0, i32* %1, align 4\l  br label %3\l}"];
+	Node0x560207b67760 -> Node0x560207b67ab0;
+	Node0x560207b67ab0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%3:\l3:                                                \l  %4 = load i32, i32* %1, align 4\l  %5 = load i32, i32* @top, align 4\l  %6 = icmp sle i32 %4, %5\l  br i1 %6, label %7, label %16\l|{<s0>T|<s1>F}}"];
+	Node0x560207b67ab0:s0 -> Node0x560207b67d30;
+	Node0x560207b67ab0:s1 -> Node0x560207b67d80;
+	Node0x560207b67d30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%7:\l7:                                                \l  %8 = load i32, i32* %1, align 4\l  %9 = sext i32 %8 to i64\l  %10 = getelementptr inbounds [100 x i32], [100 x i32]* @stack, i64 0, i64 %9\l  %11 = load i32, i32* %10, align 4\l  %12 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([4 x\l... i8], [4 x i8]* @.str.5, i64 0, i64 0), i32 noundef %11)\l  br label %13\l}"];
+	Node0x560207b67d30 -> Node0x560207b68270;
+	Node0x560207b68270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%13:\l13:                                               \l  %14 = load i32, i32* %1, align 4\l  %15 = add nsw i32 %14, 1\l  store i32 %15, i32* %1, align 4\l  br label %3, !llvm.loop !4\l}"];
+	Node0x560207b68270 -> Node0x560207b67ab0;
+	Node0x560207b67d80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%16:\l16:                                               \l  %17 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([2 x\l... i8], [2 x i8]* @.str.6, i64 0, i64 0))\l  ret void\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x55b8d9cbf260 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%0:\l  %1 = alloca i32, align 4\l  store i32 0, i32* %1, align 4\l  call void @push(i32 noundef 3)\l  call void @push(i32 noundef 5)\l  call void @push(i32 noundef 7)\l  call void @print_stack()\l  %2 = call i32 @pop()\l  call void @print_stack()\l  ret i32 0\l}"];
+}
